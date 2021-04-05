@@ -1,7 +1,15 @@
+import Head from "next/head";
+import Layout from "../../components/Layout";
+
 const Ads = () => {
   return (
     <>
-      <h1>Annonces</h1>
+      <Head>
+        <title>Annonces</title>
+      </Head>
+      <Layout>
+        <h1>Annonces</h1>
+      </Layout>
     </>
   )
 }

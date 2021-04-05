@@ -1,37 +1,91 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import Layout from '../components/Layout';
 import Suppliers from '../components/Suppliers';
 
 const Home = () => {
   return (
     <div className="container">
-      <Head>
-        <title>JC Sailing</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <Head>
+      <title>JC Sailing</title>
+    </Head>
     <Layout>
       <main>
         <h1 className="title">
           Bienvenue chez JC Sailing
         </h1>
-        <h2>Réparation poly / époxy</h2>
-        <h2>Carenage / Antifouling / Calage de bateau</h2>
-        <p className="description">
-          Nous prenons en charge le bateau pour, le carenage, nettoyage, mise à nue, primaire epoxy, antifouling, remplacement des anodes 
-        </p>
-        <h2>Peinture</h2>
-        <h2>Vente de produit</h2>
-        <p className="description">
-          Antifouling et laque
-        </p>
-        <h2>Remplacement de hublot</h2>
-        <p className="description">
-          Antifouling et laque
-        </p>
-        <h2>Stratification création & réparation</h2>
-        <p className="description">
-          Installation de propulseur, fabrication et réalisation de piéce sur mesure
-        </p>
+        <div>
+          <h2>Réparation poly / époxy</h2>
+          <Image
+            src="/images/reparation.jpeg"
+            alt="reparation poly & epoxy"
+            height={144}
+            width={144}
+          />
+          <p className="description">
+            On répare ce que vous cassez
+          </p>
+        </div>
+        <div>
+          <h2>Carenage / Antifouling / Calage de bateau</h2>
+          <Image
+            src="/images/carenage.jpeg"
+            alt="carenage"
+            height={144}
+            width={144}
+          />
+          <p className="description">
+            Nous prenons en charge le bateau pour, le carenage, nettoyage, mise à nue, primaire epoxy, antifouling, remplacement des anodes 
+          </p>
+          </div>
+        <div>
+          <h2>Peinture</h2>
+          <Image
+            src="/images/peinture.jpeg"
+            alt="peinture bateau"
+            height={144}
+            width={144}
+          />
+          <p className="description">
+            On peint !
+          </p>
+        </div>
+        <div>
+          <h2>Vente de produit</h2>
+          <Image
+            src="/images/vente.jpeg"
+            alt="vente de produit bateau"
+            height={144}
+            width={144}
+          />
+          <p className="description">
+            Antifouling et laque
+          </p>
+        </div>
+        <div>
+          <h2>Remplacement de hublot</h2>
+          <Image
+            src="/images/hublot.jpeg"
+            alt="hublot"
+            height={144}
+            width={144}
+          />
+          <p className="description">
+            Antifouling et laque
+          </p>
+        </div>
+        <div>
+          <h2>Stratification création & réparation</h2>
+          <Image
+            src="/images/stratification.jpeg"
+            alt="stratification"
+            height={144}
+            width={144}
+          />
+          <p className="description">
+            Installation de propulseur, fabrication et réalisation de piéce sur mesure
+          </p>
+        </div>
         <Suppliers/>
       </main>
       </Layout>
@@ -168,20 +222,6 @@ const Home = () => {
         }
       `}</style>
 
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
     </div>
   )
 }

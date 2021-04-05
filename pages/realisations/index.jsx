@@ -1,7 +1,15 @@
+import Head from "next/head";
+import Layout from "../../components/Layout";
+
 const Productions = () => {
   return (
     <>
-      <h1>Réalisations</h1>
+      <Head>
+        <title>Réalisations</title>
+      </Head>
+      <Layout>
+        <h1>Réalisations</h1>
+      </Layout>
     </>
   )
 }
