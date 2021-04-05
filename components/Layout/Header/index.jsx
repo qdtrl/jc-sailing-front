@@ -46,13 +46,10 @@ const Header = () => {
     </Head>
     <nav className={navbarStyle} >  
       <div className={styles.left}>    
-      
         <Link href="/">                
           <a className={logoStyle}>JC <span>Sailing</span></a>
         </Link>
-      
       </div>
-      
       <div className={styles.right}>
         <Link href="/">
           <a className={styles.navbar_links}>Accueil</a>
