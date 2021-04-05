@@ -1,0 +1,73 @@
+@import '../../../styles/config';
+
+nav {
+  &.navbar {
+    top: 0;
+    width: 100vw;
+    height: 70px;
+    position: fixed;
+    z-index: 2;
+    background-color: transparent;
+    color: $primary-color;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    &.scrolled_navbar {
+      @include transition-ease;
+      background-color: $background-navbar;
+    }
+  }
+  div.right{
+      width: 70vw;
+      display: inline-flex;
+      justify-content: flex-end;
+      margin-right: 2rem;
+  }
+
+  div.left{
+      width: 30vw;
+      display: inline-flex;
+      align-items: center;
+      a.logo{
+        margin-left: 2rem;
+        font-size: 35px;
+        font-family: Orbitron;
+        color: $background-color;
+        &.scrolled_logo {
+          @include transition-ease;
+          color: $primary-color;
+          span {
+            @include transition-ease;
+            color: $secondary-color;
+          }
+        }
+        
+      }
+  }
+   
+  .navbar_links {
+    position: relative;
+    color: $secondary-color;
+    margin-left: 25px;
+    text-decoration: none;
+    line-height: 25px;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 1.5px;
+      bottom: 0;
+      left: 0;
+      background-color: $secondary-color;
+      visibility: hidden;
+      @include transition-ease;
+    }
+    &:hover:before {
+      visibility: visible;
+      width: 100%;
+    }
+  }
+}
+
+
+

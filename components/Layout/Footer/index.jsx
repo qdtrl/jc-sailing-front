@@ -3,7 +3,7 @@ import styles from './footer.module.scss';
 const Footer = () => {
   return (
     <>
-     <footer>
+     <footer className={styles.footer}>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
@@ -12,6 +12,7 @@ const Footer = () => {
           Powered by{' '}
           <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
         </a>
+        <span>test</span>
       </footer>
     </>
   )
