@@ -1,14 +1,59 @@
 @import '../../../styles/config';
 
-.footer {
-  font-size: 1rem;
+footer.footer {
+  background-color: $background-navbar;
   position: static;
-  bottom: 0.4rem;
-  right: 1rem;
-  text-align: right;
-  padding: 1rem;
-  color: set-text-color($primary-color);
-  span {
-    color: $primary-color;
+  width: 100vw;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  section {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    div.descriptions {
+      .logo {
+        font-size: 2rem;
+        font-family: Orbitron;
+        color: set-text-color($primary-color);
+        span {
+          color: $primary-color;
+        }
+      }
+      p {
+        margin-top: 1rem;
+      }
+      width: 30vw;
+      text-align: left;
+    }
+    div.list_links {
+      display: flex;
+      flex-direction: column;
+      .navbar_links {
+        color: $secondary-color;
+        margin: 0.2rem;
+      }
+    }
+  }
+  address {
+    font-style: normal;
+  }
+  p {
+    color: set-text-color($primary-color);
+    span {
+      color: $primary-color;
+    }
+    &.mentions {
+      margin-top: 1rem;
+      padding-bottom: 1rem;
+      padding-top: 1rem;
+      margin-left: 15vw;
+      width: 70vw;
+      border-top: 1px solid white;
+    }
+    &.address {
+      margin: 1rem;
+      font-style: italic;
+    }
   }
 }
