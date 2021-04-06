@@ -29,7 +29,7 @@ const Footer = () => {
           </div>
           <address className={styles.details}>
             <h3>Contactez-nous</h3>
-            <p className={styles.address}>Rue des Pommiers <br/> 50400 Saint-Planchers</p>
+            <p className={styles.address}>Rue des Pommiers <br/> 50400, Saint-Planchers</p>
             <p>Téléphone: <a href="tel:0620753173">06.20.75.31.73</a> </p>
             <p>E-mail: <a href="mailto:jcsailing@gmail.com">jcsailing@gmail.com</a> </p>
           </address>
