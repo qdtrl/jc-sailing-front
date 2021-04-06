@@ -47,7 +47,7 @@ const Header = () => {
     <nav className={navbarStyle} >  
       <div className={styles.left}>    
         <Link href="/">                
-          <a className={logoStyle}>JC <span>Sailing</span></a>
+          <a className={logoStyle}>JC <span>Sailing</span> <em>by Jean-Cristophe Théo</em></a>
         </Link>
       </div>
       <div className={styles.right}>

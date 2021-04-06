@@ -1,0 +1,64 @@
+@import '../../styles/config';
+
+.categories {
+  width: 80vw;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  div {
+    &.card_categorie_left {
+      background-color: $background-cards;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      margin: 2rem;
+      display: flex;
+      width: 60vw;
+      justify-content: space-between;
+      .description {
+        margin: 2rem;
+        text-align: left;
+        width: 40vw;
+      }
+      button {
+        position: relative;
+        top: 12rem;
+        width: 20vw;
+        height: 50px;
+        padding: 12px 20px;
+        background: $background-grey;
+        color: $secondary-color;
+        font-size: 1rem;
+        border: 1px solid $background-grey;
+        border-left: none;
+        cursor: pointer;
+      }
+    }
+    &.card_categorie_right {
+      background-color: $background-cards;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      margin: 2rem;
+      margin-left: 20vw;
+      display: flex;
+      width: 60vw;
+      justify-content: space-between;
+      .description {
+        margin: 2rem;
+        text-align: right;
+        width: 40vw;
+      }
+      button {
+        position: relative;
+        top: 12rem;
+        width: 20vw;
+        height: 50px;
+        padding: 12px 20px;
+        background: $background-grey;
+        color: $secondary-color;
+        font-size: 1rem;
+        border: 1px solid $background-grey;
+        border-left: none;
+        cursor: pointer;
+      }
+    }
+  }
+}

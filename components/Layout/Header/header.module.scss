@@ -17,18 +17,18 @@ nav {
       background-color: $background-navbar;
     }
   }
-  div.right{
-      width: 70vw;
-      display: inline-flex;
-      justify-content: flex-end;
-      margin-right: 2rem;
-  }
-
-  div.left{
+  div {
+    &.right {
+        width: 70vw;
+        display: inline-flex;
+        justify-content: flex-end;
+        margin-right: 2rem;
+    }
+    &.left {
       width: 30vw;
       display: inline-flex;
       align-items: center;
-      a.logo{
+      a.logo {
         margin-left: 2rem;
         font-size: 35px;
         font-family: Orbitron;
@@ -40,11 +40,15 @@ nav {
             @include transition-ease;
             color: $secondary-color;
           }
-        }
-        
+          em {
+            font-size: 0.8rem;
+            word-spacing: -0.1em;
+            opacity: 0.8;
+          }
+        }  
       }
+    }
   }
-   
   .navbar_links {
     position: relative;
     color: $secondary-color;

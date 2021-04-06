@@ -1,3 +1,5 @@
+@import '../../styles/config';
+
 .suppliers {
   padding: 3rem;
   text-align: left;
@@ -5,7 +7,7 @@
     margin-left: 10vw;
     margin-bottom: 2rem;
   }
-  background-color: #9e9e9ebd;
+  background-color: $background-grey;
   ul {
     border-top: 1px solid #9e9e9ef1;
     list-style-type: none;

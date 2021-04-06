@@ -1,79 +1,99 @@
 import Image from 'next/image'
+import Link from 'next/link';
+import styles from './categories.module.scss';
 
 const Categories = () => {
   return (
-    <section>
-      <div>
-        <h2>Réparation poly / époxy</h2>
+    <section className={styles.categories}>
+      <div className={styles.card_categorie_left}>
         <Image
           src="/images/reparation.jpeg"
           alt="reparation poly & epoxy"
-          height={144}
-          width={144}
+          height={400}
+          width={400}
         />
-        <p className="description">
-          On répare ce que vous cassez
-        </p>
+        <div className={styles.description}>
+          <h2>Réparation poly / époxy</h2>
+          <p>
+            On répare ce que vous cassez
+          </p>
+          <Link href="/contact"><button>Prendre rendez-vous</button></Link>
+        </div>
       </div>
-      <div>
-        <h2>Carenage / Antifouling / Calage de bateau</h2>
+      <div className={styles.card_categorie_right}>
+        <div className={styles.description}>
+          <h2>Carenage / Antifouling / Calage de bateau</h2>
+          <p>
+            Nous prenons en charge le bateau pour, le carenage, nettoyage, mise à nue, primaire epoxy, antifouling, remplacement des anodes 
+          </p>
+          <Link href="/contact"><button>Prendre rendez-vous</button></Link>
+        </div>
         <Image
           src="/images/carenage.jpeg"
           alt="carenage"
-          height={144}
-          width={144}
+          height={400}
+          width={400}
         />
-        <p className="description">
-          Nous prenons en charge le bateau pour, le carenage, nettoyage, mise à nue, primaire epoxy, antifouling, remplacement des anodes 
-        </p>
-        </div>
-      <div>
-        <h2>Peinture</h2>
+      </div>
+      <div className={styles.card_categorie_left}>
         <Image
           src="/images/peinture.jpeg"
           alt="peinture bateau"
-          height={144}
-          width={144}
+          height={400}
+          width={400}
         />
-        <p className="description">
-          On peint !
-        </p>
+        <div className={styles.description}>
+          <h2>Peinture</h2>
+          <p>
+            On peint !
+          </p>
+          <Link href="/contact"><button>Prendre rendez-vous</button></Link>
+        </div>
       </div>
-      <div>
-        <h2>Vente de produit</h2>
+      <div className={styles.card_categorie_right}>
+        <div className={styles.description}>
+          <h2>Vente de produit</h2>
+          <p>
+            Antifouling et laque
+          </p>
+          <Link href="/contact"><button>Prendre rendez-vous</button></Link>
+        </div>
         <Image
           src="/images/vente.jpeg"
           alt="vente de produit bateau"
-          height={144}
-          width={144}
+          height={400}
+          width={400}
         />
-        <p className="description">
-          Antifouling et laque
-        </p>
       </div>
-      <div>
-        <h2>Remplacement de hublot</h2>
+      <div className={styles.card_categorie_left}>
         <Image
           src="/images/hublot.jpeg"
           alt="hublot"
-          height={144}
-          width={144}
+          height={400}
+          width={400}
         />
-        <p className="description">
-          Antifouling et laque
-        </p>
+        <div className={styles.description}>
+          <h2>Remplacement de hublot</h2>
+          <p>
+            Antifouling et laque
+          </p>
+          <Link href="/contact"><button>Prendre rendez-vous</button></Link>
+        </div>
       </div>
-      <div>
-        <h2>Stratification création & réparation</h2>
+      <div className={styles.card_categorie_right}>
+        <div className={styles.description}>
+          <h2>Stratification création & réparation</h2>
+          <p>
+            Installation de propulseur, fabrication et réalisation de piéce sur mesure
+          </p>
+          <Link href="/contact"><button>Prendre rendez-vous</button></Link>
+        </div>
         <Image
           src="/images/stratification.jpeg"
           alt="stratification"
-          height={144}
-          width={144}
+          height={400}
+          width={400}
         />
-        <p className="description">
-          Installation de propulseur, fabrication et réalisation de piéce sur mesure
-        </p>
       </div>
     </section>
   )
