@@ -4,16 +4,20 @@ import { useState, useEffect } from "react";
 import cn from 'classnames'
 import styles from './header.module.scss';
 
-const Header = () => {
-  const [navToggle, setNavToggle] = useState(false);
+const Header = ({show}) => {
+  const [navToggle, setNavToggle] = useState(show);
 
-  const handleScroll =() => {   
-    const navHeight = window.innerHeight/10; 
-    if (window.scrollY > navHeight){
+  const handleScroll =() => { 
+    if (show) {
+      return
+    } else {
+      const navHeight = window.innerHeight/10; 
+      if (window.scrollY > navHeight){
         setNavToggle(true)
-    } else {        
+      } else {        
         setNavToggle(false)
-    }
+      }
+    }  
   }
 
   
@@ -36,9 +40,6 @@ const Header = () => {
     { [styles.scrolled_logo]: navToggle }
   );
   
-  useEffect(()=> {
-    console.log(navbarStyle);
-  }, [navToggle]);
   return (
     <>
     <Head>

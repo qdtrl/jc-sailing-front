@@ -1,0 +1,23 @@
+section.contact {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    font-weight: 600;
+    font-size:xx-large;
+    padding: 2rem;
+    border-bottom: 1px solid black;
+    margin-bottom: 3rem;
+  }
+  div.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60vw;
+    a {
+      font-size: 2rem;
+    }
+  }
+}

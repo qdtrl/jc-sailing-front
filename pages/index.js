@@ -10,7 +10,7 @@ const Home = () => {
       <Head>
         <title>JC Sailing</title>
       </Head>
-      <Layout>
+      <Layout show={false}>
         <main>
           <Jumbotron/>
           <Categories/>
