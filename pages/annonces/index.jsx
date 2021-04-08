@@ -10,8 +10,6 @@ import styles from './annonces.module.scss';
 export const getStaticProps = async () => {
   const response = await fetch(`${API_URL}ads`);
   const ads = await response.json();
-  console.log("test");
-  console.log(ads);
   return {
     props: { ads },
   };
