@@ -13,7 +13,7 @@ const Categories = () => {
           width={400}
         />
         <div className={styles.description}>
-          <h2>Réparation poly / époxy</h2>
+          <h2>Réparation polyester & époxy</h2>
           <p>
             On répare ce que vous cassez
           </p>
@@ -22,7 +22,7 @@ const Categories = () => {
       </div>
       <div className={styles.card_categorie_right}>
         <div className={styles.description}>
-          <h2>Carenage / Antifouling / Calage de bateau</h2>
+          <h2>Carènage / Antifouling / Calage de bateau</h2>
           <p>
             Nous prenons en charge le bateau pour, le carenage, nettoyage, mise à nue, primaire epoxy, antifouling, remplacement des anodes 
           </p>
@@ -45,14 +45,14 @@ const Categories = () => {
         <div className={styles.description}>
           <h2>Peinture</h2>
           <p>
-            On peint !
+            Réalisation de laque au pistolet !
           </p>
           <Link href="/contact"><button>Prendre rendez-vous</button></Link>
         </div>
       </div>
       <div className={styles.card_categorie_right}>
         <div className={styles.description}>
-          <h2>Vente de produit</h2>
+          <h2>Vente de produits & produits d'entretiens</h2>
           <p>
             Antifouling et laque
           </p>
@@ -75,7 +75,7 @@ const Categories = () => {
         <div className={styles.description}>
           <h2>Remplacement de hublot</h2>
           <p>
-            Antifouling et laque
+
           </p>
           <Link href="/contact"><button>Prendre rendez-vous</button></Link>
         </div>

@@ -92,7 +92,7 @@ const Productions = ({ productions }) => {
       <Layout>
         <section className={styles.realisations}>
           <h1>Réalisations</h1>
-          <p>Voici certains de nos travaux effectués</p>
+          <p>Voici certains de nos travaux effectués ! Cliquez dessus pour en savoir plus !</p>
           { productions.length > 0 && (
             <ul>
               {productions.map(({ production, images }, index) => (

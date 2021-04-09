@@ -20,6 +20,12 @@ section.annonces {
       margin: 1rem;
       div {
         margin: 1rem;
+        &.ad_image {
+          p {
+            font-size: 0.7rem;
+            color: grey
+          }
+        }
         &.ad_description {
           width: 30vw;
           h2 {

@@ -93,13 +93,16 @@ const Ads = ({ ads }) => {
             <ul>
               {ads.map(({ ad, images }, index) => (
                 <li onClick={handleClick} key={ad.id}>
-                  <Image
-                    id={index}
-                    src={`${images[0]}`}
-                    alt={ad.name}
-                    width={140}
-                    height={140}
-                  />
+                  <div className={styles.ad_image}>
+                    <Image
+                      id={index}
+                      src={`${images[0]}`}
+                      alt={ad.name}
+                      width={140}
+                      height={140}
+                    />
+                    <p>cliquez sur l'image pour l'agrandir et voir d'autres photos</p>
+                  </div>
                   <div className={styles.ad_description}>
                     <h2>{ad.name}</h2>
                     <p>{ad.description}</p>

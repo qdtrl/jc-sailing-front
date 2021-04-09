@@ -1,6 +1,7 @@
 @import '../../../styles/config';
 
 footer.footer {
+  padding: 2rem;
   background-color: $background-navbar;
   position: static;
   width: 100vw;
@@ -39,12 +40,13 @@ footer.footer {
     font-style: normal;
   }
   p {
+    margin-top: 1rem;
     color: set-text-color($primary-color);
     span {
       color: $primary-color;
     }
     &.mentions {
-      margin-top: 1rem;
+      margin-top: 2rem;
       padding-bottom: 1rem;
       padding-top: 1rem;
       margin-left: 15vw;
