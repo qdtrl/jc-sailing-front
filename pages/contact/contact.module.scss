@@ -1,23 +1,37 @@
+@import '../../styles/config';
+
 section.contact {
+  background-image: url('../../public/images/rapetous.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 00px 400px 0px 0px;
   height: 80vh;
+  width: 100vw;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  h1 {
-    font-weight: 600;
-    font-size:xx-large;
+  div.contact {
     padding: 2rem;
-    border-bottom: 1px solid black;
-    margin-bottom: 3rem;
-  }
-  div.details {
+    padding-bottom: 3rem;
+    background-color: $background-contact;
+    border-radius: 0.5rem;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 60vw;
-    a {
-      font-size: 2rem;
+    flex-direction: column;
+    h1 {
+      font-weight: 600;
+      font-size:xx-large;
+      padding: 1rem;
+      border-bottom: 1px solid black;
+      margin-bottom: 3rem;
+    }
+    div.details {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 60vw;
+      a {
+        font-size: 2rem;
+      }
     }
   }
 }
