@@ -10,7 +10,7 @@ const Footer = () => {
             <Link href="/">                
               <a className={styles.logo}><span>JC</span> Sailing</a>
             </Link>
-            <p><span>JC</span> Sailing est une entreprise spécialisée dans la vente et réparation de bateaux de plaisance</p>
+            <p><span>JC</span> Sailing est une entreprise spécialisée dans l'entretien, la vente et la réparation de bateaux de plaisance</p>
           </div>
           <div className={styles.list_links}>
             <h3>Liens utiles</h3>

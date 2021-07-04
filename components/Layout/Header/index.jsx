@@ -7,7 +7,7 @@ import styles from './header.module.scss';
 const Header = ({show}) => {
   const [navToggle, setNavToggle] = useState(show);
 
-  const handleScroll =() => { 
+  const handleScroll = () => { 
     if (show) {
       return
     } else {

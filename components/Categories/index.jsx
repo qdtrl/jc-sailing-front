@@ -37,7 +37,7 @@ const Categories = () => {
       </div>
       <div className={styles.card_categorie_left}>
         <Image
-          src="/images/peinture.jpeg"
+          src="/images/peinture.png"
           alt="peinture bateau"
           height={400}
           width={400}

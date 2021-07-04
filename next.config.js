@@ -1,5 +1,5 @@
 module.exports = {
   images: {
-    domains: ['localhost'],
+    domains: ['jcsailing.s3.eu-west-3.amazonaws.com'],
   },
 }

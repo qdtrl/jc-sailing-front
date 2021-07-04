@@ -87,23 +87,25 @@ const Productions = ({ productions }) => {
         </section>
       </Modal>
       <Head>
-        <title>Réalisations</title>
+        <title>Réalisations & prestation de réparation et d'entretien par Jean-Cristophe Théo à Granville</title>
       </Head>
       <Layout>
         <section className={styles.realisations}>
           <h1>Réalisations</h1>
-          <p>Voici certains de nos travaux effectués ! Cliquez dessus pour en savoir plus !</p>
+          <p>Voici certains de nos travaux effectués ! Cliquez dessus pour en découvrir plus !</p>
+          { productions.length > 0 || <h2 className={styles.empty_productions}> Aucune réalisation pour le moment</h2> }
           { productions.length > 0 && (
             <ul>
-              {productions.map(({ production, images }, index) => (
-                <li onClick={handleClick} key={production.id}>
+              {productions.map(({ id, name, images }, index) => (
+                <li onClick={handleClick} key={id}>
                   <Image
-                    id={index}
-                    src={`${images[0]}`}
-                    alt={production.name}
+                    id={id}
+                    src={`${images[0].formats.medium.url}`}
+                    alt={`${images[0].hash}`}
                     width={300}
                     height={300}
                   />
+                  <p>{name}</p>
                 </li>
               ))}
             </ul>
