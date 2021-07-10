@@ -49,7 +49,7 @@ const Categories = () => {
       </div>
       <div className={styles.card_categorie_left}>
         <Image
-          src="/images/vente.jpeg"
+          src="/images/vente.png"
           alt="vente de produit bateau"
           height={400}
           width={400}
