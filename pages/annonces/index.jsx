@@ -37,7 +37,6 @@ const Ads = ({ ads }) => {
                       width={140}
                       height={140}
                     />
-                    <p>cliquez sur l'image pour l'agrandir et voir d'autres photos</p>
                   </div>
                   <div className={styles.ad_description}>
                     <h2>{`${name}`}</h2>
