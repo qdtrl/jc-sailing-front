@@ -1,5 +1,7 @@
 const Ad = ({ adData }) => {
+  console.log(adData);
   const { name, description, price, published_at, images} = adData;
+
   return (
     <>
       {name}

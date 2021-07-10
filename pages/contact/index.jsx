@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <>
       <Head>
-        <title>Contact</title>
+        <title>Contact JC Sailing sur Granville pour de la vente, l'entretien et la réparation de voiliers et bateaux moteurs</title>
       </Head>
       <Layout>
         <section className={styles.contact}>

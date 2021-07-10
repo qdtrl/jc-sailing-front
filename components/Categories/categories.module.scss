@@ -8,9 +8,11 @@
   margin-right: 10vw;
   div {
     &.card_categorie_left {
-      background-color: $background-cards;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      // background-color: $background-cards;
+      // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       margin: 2rem;
+      margin-left: 10vw;
+      margin-bottom: 4rem;
       display: flex;
       width: 60vw;
       justify-content: space-between;
@@ -18,10 +20,17 @@
         margin: 2rem;
         text-align: left;
         width: 40vw;
+        h2 {
+          margin: 1rem;
+        }
+        p {
+          margin: 2rem
+        }
       }
       button {
         position: relative;
-        top: 12rem;
+        top: 2rem;
+        left: 8rem;
         width: 20vw;
         height: 50px;
         padding: 12px 20px;
@@ -34,10 +43,11 @@
       }
     }
     &.card_categorie_right {
-      background-color: $background-cards;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      // background-color: $background-cards;
+      // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       margin: 2rem;
-      margin-left: 20vw;
+      margin-left: 10vw;
+      margin-bottom: 4rem;
       display: flex;
       width: 60vw;
       justify-content: space-between;
@@ -45,10 +55,17 @@
         margin: 2rem;
         text-align: right;
         width: 40vw;
+        h2 {
+          margin: 1rem;
+        }
+        p {
+          margin: 2rem
+        }
       }
       button {
         position: relative;
-        top: 12rem;
+        top: 4rem;
+        right: 6rem;
         width: 20vw;
         height: 50px;
         padding: 12px 20px;

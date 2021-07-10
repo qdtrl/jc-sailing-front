@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>JC Sailing</title>
+        <title>JC Sailing - Entretien, réparation et vente de voilier bateaux moteur et d'équipement nautique</title>
       </Head>
       <Layout show={false}>
         <main>

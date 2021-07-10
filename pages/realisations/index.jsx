@@ -87,7 +87,7 @@ const Productions = ({ productions }) => {
         </section>
       </Modal>
       <Head>
-        <title>Réalisations & prestation de réparation et d'entretien par Jean-Cristophe Théo à Granville</title>
+        <title>Réalisations & prestation de réparation et d'entretien par Jean-Cristophe Théo à Granville sur des voiliers et bateux moteurs</title>
       </Head>
       <Layout>
         <section className={styles.realisations}>

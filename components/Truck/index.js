@@ -1,13 +1,15 @@
 import Image from 'next/image'
+import styles from './truck.module.scss';
 
 const Truck = () => {
   return (
     <>
-      <div>
+      <div className={styles.truck}>
         <Image 
           src="/images/camion.png"
           alt="camion entretien jc-sailing"
-          layout='fill'
+          height={900}
+          width={1600}
         />
       </div>
     </>

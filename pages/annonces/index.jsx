@@ -19,7 +19,7 @@ const Ads = ({ ads }) => {
   return (
     <>
       <Head>
-        <title>Annonces Nautiques - Ventes de bateaux et Equipements de Nautisme sur Granville</title>
+        <title>Annonces Nautiques - Ventes de bateaux à voiles et moteurs et Equipements de Nautisme sur Granville</title>
       </Head>
       <Layout>
         <section className={styles.annonces}>
@@ -28,7 +28,7 @@ const Ads = ({ ads }) => {
           { ads.length > 0 && (
             <ul>
               {ads.map(({ id, name, description, price, published_at, images }, index) => (
-                <li onClick={handleClick} key={id}>
+                <li key={id}>
                   <div className={styles.ad_image}>
                     <Image
                       id={id}

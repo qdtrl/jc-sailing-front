@@ -6,7 +6,7 @@ section.jumbotron {
   align-items: left;
   width: 100vw;
   height: 80vh;
-  background: opacify($color: #000000, $amount: 0.4) url("../../public/images/jumbotron.png");
+  // background: opacify($color: #000000, $amount: 0.4) url("../../public/images/jumbotron.png");
   background-size: cover;
   position: static;
   h1 {
