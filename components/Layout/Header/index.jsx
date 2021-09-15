@@ -1,12 +1,9 @@
-import Head from "next/head";
-import Link from 'next/link'
 import { useState, useEffect } from "react";
-import cn from 'classnames'
 import NavBar from './Navbar';
 import Button from './Button';
 
 const Header = ({show}) => {
-  const [ windowHeight, setWindowHeight ] = useState(800)
+  const [windowHeight, setWindowHeight] = useState(800);
 
   useEffect(() => {
     if (window.innerWidth) {
