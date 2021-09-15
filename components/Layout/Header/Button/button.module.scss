@@ -1,0 +1,162 @@
+@import '../../../../styles/config';
+
+@mixin transition-ease {
+  transition: all 0.5s ease-in-out;
+}
+.left {
+  position: absolute; 
+  left: 2rem;
+  top: 2rem; 
+  a.logo {
+    margin-left: 2rem;
+    font-size: 35px;
+    font-family: Orbitron;
+    color: $background-color;
+    &.scrolled_logo {
+      z-index: 4;
+      @include transition-ease;
+      color: $primary-color;
+      span {
+        @include transition-ease;
+        color: $secondary-color;
+      }
+      em {
+        font-size: 0.8rem;
+        word-spacing: -0.1em;
+        opacity: 0.8;
+      }
+    }  
+  }
+}
+.nav_burger{
+  display: fixed;
+  flex-direction: row;
+  height: 10vh;
+  width: 100vw;
+}
+
+.menu_btn {
+  position: fixed;
+  right: 2rem;
+  z-index: 4;
+  top: 2rem;
+  height: 20px;
+  width: 28px;
+  cursor: pointer;
+  @include transition-ease;
+  &.burger {
+    position: absolute;
+    right: 0;
+    top: 0.5rem;
+    width: 30px;
+    height: 5px;
+    background: black;
+    @include transition-ease;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      width: 30px;
+      height: 5px;
+      background: black;
+      @include transition-ease;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 10px;
+      width: 30px;
+      height: 5px;
+      background: black;
+      @include transition-ease;
+    }
+    &.open {
+      transform: rotate(720deg);
+      background: transparent;
+      &::before {
+        transform: rotate(45deg) translate(5px, 11px);
+        background-color: $background-grey;
+      }
+      &::after {
+        width: 30px;
+        transform: rotate(-45deg) translate(3px, -10px);
+        background-color: $background-grey;
+      }
+    }
+  }
+}
+
+.nav_burger {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 2;
+  visibility: hidden;
+  &.open {
+    visibility: visible;
+  }
+  .menu_nav {
+    margin-top: 0;
+    margin-left: 0;
+    z-index: 3;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background: $background-navbar;
+    list-style-type: none;
+    padding-right: 2rem;
+    transform: translateY(-100vh);
+    @include transition-ease;
+
+    &.open {
+      transform: translateY(0);
+    }
+    &_item {
+      transform: translateX(100vw);
+      @include transition-ease;
+      &.open {
+        transform: translateX(0);
+      }
+      &.active > a {
+        color : $primary-color;
+      }
+    }
+
+    &_link {
+      display: inline-block;
+      font-size: 2rem;
+      z-index: 3;
+      text-transform: uppercase;
+      padding: 2rem 0;
+      font-weight: 300;
+      @include transition-ease;
+    }
+  }
+}
+@for $var from 1 through 5 {
+  .menu_nav_item:nth-child(#{$var}) {
+    transition-delay: $var * 0.1s + 0.15s;
+  }
+}
+
+.navItemsBurger{
+  position: relative;
+  color: $secondary-color;
+  text-decoration: none;
+  line-height: 60px;
+  font-size: 30px;
+  text-transform: uppercase;
+  &:hover {
+    color : $primary-color;
+  }
+}
+
+.btnBurger{
+ margin-top: 30px; 
+}

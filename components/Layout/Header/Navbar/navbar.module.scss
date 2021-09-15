@@ -1,4 +1,4 @@
-@import '../../../styles/config';
+@import '../../../../styles/config';
 
 nav {
   &.navbar {
@@ -6,7 +6,7 @@ nav {
     width: 100vw;
     height: 70px;
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     background-color: transparent;
     color: $primary-color;
     display: flex;
@@ -25,7 +25,7 @@ nav {
         margin-right: 2rem;
     }
     &.left {
-      width: 30vw;
+      width: 450px;
       display: inline-flex;
       align-items: center;
       a.logo {
