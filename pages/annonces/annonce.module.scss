@@ -1,0 +1,81 @@
+section.annonce {
+  h1 {
+    margin-top: 90px;
+  }
+  h1, h2, p {
+    text-align: center;
+  }
+  h2 {
+    margin: 30vh;
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: center;
+    margin-left: 15vw;
+    width: 70vw;
+    li {
+      display: flex;
+      justify-content: space-between;
+      width: 60vw;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      margin: 1rem;
+      div {
+        margin: 1rem;
+        &.ad_image {
+          p {
+            font-size: 0.7rem;
+            color: grey
+          }
+        }
+        &.ad_description {
+          width: 30vw;
+          h2 {
+            margin: 0;
+            width: 30vw;
+            text-align: center;
+          }
+          p {
+            margin-top: 2rem;
+            padding: 0;
+            text-align: left;
+          }
+        }
+        &.ad_details {
+          
+          p {
+            margin: 1rem;
+            &.ad_date {
+              border-top: 1px solid rgba(26, 23, 23, 0.787);
+              padding-top: 1rem ;
+            }
+          }
+
+        }
+      }
+      cursor: pointer;
+    }
+  }
+}
+
+section.ads_images {
+  text-align: center;
+  div.ads_image {
+    height: 60vh;
+    margin-bottom: 2rem;
+  }
+  ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    width: 40vw;
+    margin-left: 10vw;
+    li {
+      cursor: pointer;
+      &:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+    }
+  }
+}

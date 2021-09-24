@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from 'next/link'
 import Moment from 'moment';
 import Layout from "../../components/Layout";
 import { API_URL } from "../../config";
@@ -27,7 +28,8 @@ const Ads = ({ ads }) => {
           { ads.length > 0 || <h2 className={styles.empty_ads}> Aucune annonce pour le moment</h2> }
           { ads.length > 0 && (
             <ul>
-              {ads.map(({ id, name, description, price, published_at, images }, index) => (
+              {ads.map(({ id, name, description, price, updated_at, images }) => (
+                <Link href={`annonces/${id}`}>
                 <li key={id}>
                   <div className={styles.ad_image}>
                     <Image
@@ -44,9 +46,10 @@ const Ads = ({ ads }) => {
                   </div>
                   <div className={styles.ad_details}>
                     <p className={styles.ad_price}>{`${price}`}	€</p>
-                    <p className={styles.ad_date}>Date de mise en ligne <br/> {Moment(published_at).format('LL')}</p>  
+                    <p className={styles.ad_date}>Date de mise en ligne <br/> {Moment(updated_at).format('LL')}</p>  
                   </div>
                 </li>
+                </Link>
               ))}
             </ul>
           )}
