@@ -1,6 +1,8 @@
 import Head from "next/head";
+import Link from "next/link";
 import Moment from 'moment';
 import Layout from "../../components/Layout";
+import SeeOthers from "../../components/SeeOthers";
 import ImagesShower from "../../components/ImagesShower";
 import styles from './annonce.module.scss';
 
@@ -10,7 +12,7 @@ import { API_URL } from "../../config";
 const Ad = ({ad}) => {
   Moment.locale("fr");
 
-  const { name, description, price, updated_at, images } = ad;
+  const { name, description, price, updated_at, images, id } = ad;
   
   return (
     <>
@@ -19,6 +21,9 @@ const Ad = ({ad}) => {
       </Head>
       <Layout>
         <section className={styles.annonce}>
+          <div className={styles.linkBack} >
+          <Link href="/annonces">Retour aux annonces</Link>
+          </div>
           <h1>{name}</h1>
           <ImagesShower 
             images = {images}
@@ -26,6 +31,9 @@ const Ad = ({ad}) => {
           <p>{description}</p>
           <p>{price} €</p>
         </section>
+        {/* <SeeOthers
+          id={id}
+        /> */}
       </Layout>
     </>
   )

@@ -29,8 +29,8 @@ const Ads = ({ ads }) => {
           { ads.length > 0 && (
             <ul>
               {ads.map(({ id, name, description, price, updated_at, images }) => (
-                <Link href={`annonces/${id}`}>
-                <li key={id}>
+                <Link key={id} href={`annonces/${id}`}>
+                <li>
                   <div className={styles.ad_image}>
                     <Image
                       id={id}

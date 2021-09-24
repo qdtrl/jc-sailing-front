@@ -1,6 +1,13 @@
 section.annonce {
-  h1 {
+  .linkBack {
     margin-top: 90px;
+    margin-left: 90px;
+    :hover {
+      text-decoration: underline;
+    }
+  }
+  h1 {
+    margin: 20px;
   }
   h1, h2, p {
     text-align: center;
