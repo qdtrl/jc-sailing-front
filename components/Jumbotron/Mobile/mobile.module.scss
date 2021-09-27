@@ -1,0 +1,43 @@
+@import '../../../styles/config';
+
+section.jumbotron {
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 100vw;
+  height: 60vh;
+  h1 {
+    z-index: 0;
+    width: 80vw;
+    padding-top: 2rem;
+    padding-left: 1rem;
+    font-family: Orbitron;
+    font-size: 1.5rem;
+    span {
+      color: $primary-color;
+    }
+  }
+  p {
+    padding-left: 1rem;
+    font-size: 1rem;
+  }
+  .center {
+    background-color: aqua;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  button {
+    margin-top: 10rem;
+    width: 60vw;
+    padding: 1rem 1rem;
+    background: $primary-color;
+    color: $secondary-color;
+    font-size: 1rem;
+    border: 1px solid $primary-color;
+    border-left: none;
+    cursor: pointer;
+  }
+}

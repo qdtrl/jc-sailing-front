@@ -1,20 +1,44 @@
-@import '../../styles/config';
+@import '../../../styles/config';
 
 .categories {
-  width: 80vw;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-  margin-left: 10vw;
-  margin-right: 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   div {
-    &.card_categorie_left {
-      // background-color: $background-cards;
-      // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      margin: 2rem;
-      margin-left: 10vw;
+    &.center {   
+      width: 1000px;
+      h2, p {
+        margin: 2rem;
+      }
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+    }
+  }
+  div {
+    &.card_categorie_center {
+      margin: 50px;
       margin-bottom: 4rem;
       display: flex;
-      width: 60vw;
+      width: 900px;
+      justify-content: space-between;
+      .description {
+        margin: 2rem;
+        text-align: left;
+        width: 40vw;
+        h2 {
+          margin: 1rem;
+        }
+        p {
+          margin: 2rem
+        }
+      }
+    }
+    &.card_categorie_left {
+      margin: 50px;
+      margin-bottom: 4rem;
+      display: flex;
+      width: 900px;
       justify-content: space-between;
       .description {
         margin: 2rem;
@@ -43,13 +67,10 @@
       }
     }
     &.card_categorie_right {
-      // background-color: $background-cards;
-      // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      margin: 2rem;
-      margin-left: 10vw;
+      margin: 50px;
       margin-bottom: 4rem;
       display: flex;
-      width: 60vw;
+      width: 900px;
       justify-content: space-between;
       .description {
         margin: 2rem;
