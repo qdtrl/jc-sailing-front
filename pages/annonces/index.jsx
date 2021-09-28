@@ -1,10 +1,10 @@
 import Head from "next/head";
 import Image from "next/image";
-import Link from 'next/link'
+import Link from 'next/link';
+import { useState, useEffect } from "react";
 import Moment from 'moment';
 import Layout from "../../components/Layout";
 import { API_URL } from "../../config";
-import { useState, useEffect } from "react";
 import styles from './annonces.module.scss';
 
 export const getStaticProps = async () => {
