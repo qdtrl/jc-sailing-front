@@ -19,7 +19,7 @@ const Truck = () => {
           src="/images/camion.png"
           alt="camion entretien jc-sailing"
           height={windowHeight/3.3}
-          width={windowHeight/1.6}
+          width={windowHeight/2}
         />
       </div>
       : 
@@ -28,7 +28,7 @@ const Truck = () => {
           src="/images/camion.png"
           alt="camion entretien jc-sailing"
           height={windowHeight/1.9}
-          width={windowHeight/1.1}
+          width={windowHeight/1.2}
         />
       </div>
     }
