@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Moment from 'moment';
 import Layout from "../../components/Layout";
 import { API_URL } from "../../config";
+import { useState, useEffect } from "react";
 import styles from './annonces.module.scss';
 
 export const getStaticProps = async () => {
@@ -17,13 +18,21 @@ export const getStaticProps = async () => {
 const Ads = ({ ads }) => {
   Moment.locale("fr");
 
+  const [windowHeight, setWindowHeight] = useState(800);
+
+  useEffect(() => {
+    if (window.innerWidth) {
+      setWindowHeight(window.innerWidth);
+    }
+  }, [windowHeight]);
+
   return (
     <>
       <Head>
         <title>Annonces Nautiques - Ventes de bateaux à voiles et moteurs et Equipements de Nautisme sur Granville</title>
       </Head>
       <Layout>
-        <section className={styles.annonces}>
+        <section className={windowHeight >= 1200 ? styles.annonces_web : styles.annonces_mobile }>
           <h1>Annonces</h1>
           { ads.length > 0 || <h2 className={styles.empty_ads}> Aucune annonce pour le moment</h2> }
           { ads.length > 0 && (
@@ -34,15 +43,15 @@ const Ads = ({ ads }) => {
                   <div className={styles.ad_image}>
                     <Image
                       id={id}
-                      src={`${images[0].formats.medium.url}`}
+                      src={`${images[0].formats.thumbnail.url}`}
                       alt={`${images[0].hash}`}
-                      width={140}
-                      height={140}
+                      width={250}
+                      height={250}
                     />
                   </div>
                   <div className={styles.ad_description}>
                     <h2>{`${name}`}</h2>
-                    <p>{`${description}`}</p>
+                    <p>{description.length >= 100 ? `${description.slice(0, 100)} ...` : description}</p>
                   </div>
                   <div className={styles.ad_details}>
                     <p className={styles.ad_price}>{`${price}`}	€</p>

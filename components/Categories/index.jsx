@@ -9,7 +9,7 @@ const Categories = () => {
     if (window.innerWidth) {
       setWindowHeight(window.innerWidth);
     }
-  }, [])
+  }, [windowHeight])
   
   return (
     <>

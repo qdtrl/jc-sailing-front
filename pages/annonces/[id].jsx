@@ -22,7 +22,7 @@ const Ad = ({ad}) => {
       <Layout>
         <section className={styles.annonce}>
           <div className={styles.linkBack} >
-          <Link href="/annonces">Retour aux annonces</Link>
+            <Link href="/annonces">Retour aux annonces</Link>
           </div>
           <h1>{name}</h1>
           <ImagesShower 

@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
-import Link from 'next/link'
+import Link from 'next/link';
+import { useState, useEffect } from "react";
 import Layout from "../../components/Layout";
 import { API_URL } from "../../config";
 import styles from './realisations.module.scss';
@@ -14,6 +15,13 @@ export const getStaticProps = async () => {
 };
 
 const Productions = ({ productions }) => {
+  const [windowHeight, setWindowHeight] = useState(800);
+
+  useEffect(() => {
+    if (window.innerWidth) {
+      setWindowHeight(window.innerWidth);
+    }
+  }, [windowHeight]);
 
   return (
     <>
@@ -22,12 +30,12 @@ const Productions = ({ productions }) => {
       </Head>
       <Layout>
         <section className={styles.realisations}>
-          <h1>Réalisations</h1>
+          <h1 className={windowHeight >= 1200 ? styles.title_web : styles.title_mobile }>Réalisations</h1>
           <p>Voici certains de nos travaux effectués ! Cliquez dessus pour en découvrir plus !</p>
           { productions.length > 0 || <h2 className={styles.empty_productions}> Aucune réalisation pour le moment</h2> }
           { productions.length > 0 && (
             <ul>
-              {productions.map(({ id, name, images }) => (
+              {productions.map(({ id, images }) => (
                 <Link key={id} href={`realisations/${id}`}>
                 <li>
                   <Image
@@ -37,7 +45,6 @@ const Productions = ({ productions }) => {
                     width={300}
                     height={300}
                   />
-                  <p>{name}</p>
                 </li>
                 </Link>
               ))}

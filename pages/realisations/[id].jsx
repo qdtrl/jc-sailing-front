@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 import Moment from 'moment';
 import Layout from "../../components/Layout";
 import SeeOthers from "../../components/SeeOthers";
@@ -12,7 +13,15 @@ import { API_URL } from "../../config";
 const Production = ({production}) => {
   Moment.locale("fr");
 
-  const { name, description, price, updated_at, images, id } = production;
+  const [windowHeight, setWindowHeight] = useState(800);
+
+  useEffect(() => {
+    if (window.innerWidth) {
+      setWindowHeight(window.innerWidth);
+    }
+  }, [windowHeight]);
+
+  const { name, description, updated_at, images, id } = production;
   
   return (
     <>
@@ -20,8 +29,8 @@ const Production = ({production}) => {
         <title>{name} - Réalisation de JC Sailing Nautique Granville</title>
       </Head>
       <Layout>
-        <section className={styles.annonce}>
-          <div className={styles.linkBack} >
+        <section className={styles.realisation}>
+          <div className={windowHeight >= 1200 ? styles.linkBack_web : styles.linkBack_mobile} >
           <Link href="/realisations">Retour aux réalisations</Link>
           </div>
           <h1>{name}</h1>
@@ -29,7 +38,6 @@ const Production = ({production}) => {
             images = {images}
           />
           <p>{description}</p>
-          <p>{price} €</p>
         </section>
         {/* <SeeOthers
           id={id}

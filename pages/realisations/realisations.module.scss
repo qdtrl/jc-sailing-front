@@ -1,6 +1,9 @@
 section.realisations {
-  h1 {
+  .title_web {
     margin-top: 90px;
+  }
+  .title_mobile {
+    margin-top: 40px;
   }
   h1, h2, p {
     text-align: center;
@@ -25,6 +28,7 @@ section.realisations {
       }
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       margin: 1rem;
+      margin-top: 0rem;
       cursor: pointer;
     }
   }
