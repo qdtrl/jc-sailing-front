@@ -1,7 +1,14 @@
 section.annonce {
-  .linkBack {
+  .linkBack_web {
     margin-top: 90px;
-    margin-left: 90px;
+    margin-left: 3rem;
+    :hover {
+      text-decoration: underline;
+    }
+  }
+  .linkBack_mobile {
+    margin-top: 2rem;
+    margin-left: 2rem;
     :hover {
       text-decoration: underline;
     }

@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 import Moment from 'moment';
 import Layout from "../../components/Layout";
 import SeeOthers from "../../components/SeeOthers";
@@ -12,6 +13,14 @@ import { API_URL } from "../../config";
 const Ad = ({ad}) => {
   Moment.locale("fr");
 
+  const [windowHeight, setWindowHeight] = useState(800);
+
+  useEffect(() => {
+    if (window.innerWidth) {
+      setWindowHeight(window.innerWidth);
+    }
+  }, [windowHeight]);
+
   const { name, description, price, updated_at, images, id } = ad;
   
   return (
@@ -21,7 +30,7 @@ const Ad = ({ad}) => {
       </Head>
       <Layout>
         <section className={styles.annonce}>
-          <div className={styles.linkBack} >
+          <div className={windowHeight >= 1200 ? styles.linkBack_web : styles.linkBack_mobile} >
             <Link href="/annonces">Retour aux annonces</Link>
           </div>
           <h1>{name}</h1>
