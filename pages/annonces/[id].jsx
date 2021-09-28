@@ -51,7 +51,6 @@ const Ad = ({ad}) => {
 export const getStaticPaths = async () => {
   const response = await fetch(`${API_URL}ads`);
   const ads = await response.json();
-  console.log(ads);
   const paths = await ads.map(ad =>({
     params: {id: ad.id.toString()},
   }))
