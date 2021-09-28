@@ -1,4 +1,5 @@
-import Link from "next/link"
+import Link from "next/link";
+import Truck from '../../Truck';
 import styles from './mobile.module.scss';
 
 const Mobile = () => {
@@ -7,7 +8,8 @@ const Mobile = () => {
       <h1>
         Bienvenue chez <br/><span>JC</span> Sailing !
       </h1>
-      <p>Un problème avec votre bateaux ?</p>  
+      <p>Un problème avec votre bateaux ?</p> 
+      <Truck /> 
       <div className={styles.center}>
         <Link href="/contact"><button>Contacter nous !</button></Link>
       </div> 

@@ -6,12 +6,12 @@
 .left {
   position: absolute;
   left: 1rem;
-  top: 1rem; 
+  top: 2rem; 
   a.logo {
-    margin-left: 1rem;
     font-size: 35px;
     font-family: Orbitron;
     color: $background-color;
+    line-height: 2px;
     &.scrolled_logo {
       z-index: 4;
       @include transition-ease;
@@ -110,7 +110,6 @@
     overflow: hidden;
     background: $background-navbar;
     list-style-type: none;
-    padding-right: 2rem;
     transform: translateY(-100vh);
     @include transition-ease;
 

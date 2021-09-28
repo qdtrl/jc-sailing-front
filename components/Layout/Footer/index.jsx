@@ -1,11 +1,20 @@
 import Link from 'next/link';
 import styles from './footer.module.scss';
+import { useState, useEffect } from "react";
 
 const Footer = () => {
+  const [windowHeight, setWindowHeight] = useState(800);
+
+  useEffect(() => {
+    if (window.innerWidth) {
+      setWindowHeight(window.innerWidth);
+    }
+  }, [])
+
   return (
     <>
-     <footer className={styles.footer}>
-       <section>
+     <footer className={windowHeight >= 1200 ? styles.footer_web : styles.footer_mobile }>
+       <section className={styles.section}>
           <div className={styles.descriptions}>
             <Link href="/">                
               <a className={styles.logo}><span>JC</span> Sailing</a>

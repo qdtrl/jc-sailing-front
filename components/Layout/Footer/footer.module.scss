@@ -1,6 +1,6 @@
 @import '../../../styles/config';
 
-footer.footer {
+footer.footer_web {
   padding: 2rem;
   padding-bottom: 1rem;
   background-color: $background-navbar;
@@ -51,6 +51,66 @@ footer.footer {
       padding-top: 1rem;
       margin-left: 15vw;
       width: 70vw;
+      border-top: 1px solid white;
+    }
+    &.address {
+      margin: 1rem;
+      
+      font-style: italic;
+    }
+  }
+}
+
+footer.footer_mobile {
+  padding: 2rem;
+  padding-bottom: 1rem;
+  background-color: $background-navbar;
+  position: absolute;
+  width: 100vw;
+  right: 0;
+  text-align: center;
+  section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;    
+    div.descriptions {
+      margin-bottom: 2rem;
+      .logo {
+        font-size: 2rem;
+        font-family: Orbitron;
+        color: set-text-color($primary-color);
+        span {
+          color: $primary-color;
+        }
+      }
+      p {
+        margin-top: 1rem;
+      }
+    }
+    div.list_links {
+      margin-bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+      .navbar_links {
+        color: $secondary-color;
+        margin: 0.2rem;
+      }
+    }
+  }
+  address {
+    font-style: normal;
+  }
+  p {
+    margin-top: 1rem;
+    color: set-text-color($primary-color);
+    span {
+      color: $primary-color;
+    }
+    &.mentions {
+      margin-top: 2rem;
+      padding-bottom: 0rem;
+      padding-top: 1rem;
+      text-align: center;
       border-top: 1px solid white;
     }
     &.address {

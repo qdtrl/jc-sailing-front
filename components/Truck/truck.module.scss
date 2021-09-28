@@ -6,3 +6,13 @@ div.truck {
   position: absolute;
   right: 0;
 }
+
+div.truck_mobile {
+  width: 100vw;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}

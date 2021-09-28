@@ -13,6 +13,7 @@ const Truck = () => {
 
   return (
     <>
+    { windowHeight >= 1200 ? 
       <div className={styles.truck}>
         <Image 
           src="/images/camion.png"
@@ -21,6 +22,16 @@ const Truck = () => {
           width={windowHeight/1.6}
         />
       </div>
+      : 
+      <div className={styles.truck_mobile}>
+        <Image 
+          src="/images/camion.png"
+          alt="camion entretien jc-sailing"
+          height={windowHeight/1.9}
+          width={windowHeight/1.1}
+        />
+      </div>
+    }
     </>
   )
 }

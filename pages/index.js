@@ -3,7 +3,6 @@ import Categories from '../components/Categories';
 import Jumbotron from '../components/Jumbotron';
 import Layout from '../components/Layout';
 import Suppliers from '../components/Suppliers';
-import Truck from '../components/Truck';
 
 const Home = () => {
   return (
@@ -13,7 +12,6 @@ const Home = () => {
       </Head>
       <Layout show={false}>
         <main>
-          <Truck />
           <Jumbotron/>
           <Categories/>
           <Suppliers/>

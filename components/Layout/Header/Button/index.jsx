@@ -70,7 +70,7 @@ const Button = () => {
         <ul className={menuStyle}>
         <div className={styles.left}>    
           <Link href="/">                
-            <a className={logoStyle} >JC <span>Sailing</span> <em>by Jean-Cristophe Théo</em></a>
+            <a className={logoStyle}>JC <span>Sailing</span><br/><em>by Jean-Cristophe Théo</em></a>
           </Link>
         </div>
           <li 

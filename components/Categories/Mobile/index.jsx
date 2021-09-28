@@ -20,8 +20,8 @@ const Mobile = () => {
         <Image
           src="/images/peinture.png"
           alt="peinture bateau"
-          height={800}
-          width={800}
+          height={700}
+          width={700}
         />
         <div className={styles.description}>
           <h2>Réparation polyester & époxy</h2>
