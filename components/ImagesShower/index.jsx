@@ -1,9 +1,14 @@
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from './imagesshower.module.scss';
 
 const ImagesShower = ( {images} ) => {
   const [ bigPicture, setBigPicture ] = useState(images[0]);
+  const [ indexBigPicture, setIndexBigPicture ] = useState(images[0].id);
+
+  useEffect(() => {
+    setIndexBigPicture(bigPicture.id);
+  }, [bigPicture]);
 
   const handleClickImage = (e) => {
     const imageId = images.findIndex(image => image.id == e.target.id);
@@ -25,7 +30,7 @@ const ImagesShower = ( {images} ) => {
       { images.length > 1
       && (
         images.map((image, index) => ( 
-          <div key={index} onClick={handleClickImage}>
+          <div key={index} onClick={handleClickImage} className={ image.id === indexBigPicture ? styles.border : ""}>
             <Image
               id={image.id}
               src={`${image.formats.thumbnail.url}`}

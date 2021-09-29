@@ -19,7 +19,7 @@ const Mobile = () => {
         </div>
         <Image
           src="/images/peinture.png"
-          alt="peinture bateau"
+          alt="laque-peinture-bateau-marin-pecheur"
           height={425}
           width={425}
         />
@@ -51,7 +51,7 @@ const Mobile = () => {
         </div>
         <Image
           src="/images/vente.png"
-          alt="vente de produit bateau"
+          alt="vente-de-produit-entretien-voilier-bateaux-moteur"
           height={400}
           width={400}
         />
