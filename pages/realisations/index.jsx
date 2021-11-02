@@ -15,13 +15,15 @@ export const getStaticProps = async () => {
 };
 
 const Productions = ({ productions }) => {
-  const [windowHeight, setWindowHeight] = useState(800);
+  const [windowHeight, setWindowHeight] = useState(0);
 
   useEffect(() => {
-    if (window.innerWidth) {
-      setWindowHeight(window.innerWidth);
-    }
-  }, [windowHeight]);
+    const handleResize = () => setWindowHeight(window.innerWidth);
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <>

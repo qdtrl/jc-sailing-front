@@ -4,14 +4,16 @@ import styles from './suppliers.module.scss';
 
 
 const Suppliers = () => {
-  const [windowHeight, setWindowHeight] = useState(800);
+  const [windowHeight, setWindowHeight] = useState(0);
   const [index, setIndex ] = useState(0);
 
   useEffect(() => {
-    if (window.innerWidth) {
-      setWindowHeight(window.innerWidth);
-    }
-  }, [])
+    const handleResize = () => setWindowHeight(window.innerWidth);
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   
   const suppliers = [
     <Image

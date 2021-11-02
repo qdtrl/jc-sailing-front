@@ -13,13 +13,15 @@ import { API_URL } from "../../config";
 const Production = ({production}) => {
   Moment.locale("fr");
 
-  const [windowHeight, setWindowHeight] = useState(800);
+  const [windowHeight, setWindowHeight] = useState(0);
 
   useEffect(() => {
-    if (window.innerWidth) {
-      setWindowHeight(window.innerWidth);
-    }
-  }, [windowHeight]);
+    const handleResize = () => setWindowHeight(window.innerWidth);
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const { name, description, updated_at, images, id } = production;
   

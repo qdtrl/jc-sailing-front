@@ -3,13 +3,15 @@ import NavBar from './Navbar';
 import Button from './Button';
 
 const Header = ({show}) => {
-  const [windowHeight, setWindowHeight] = useState(800);
+  const [windowHeight, setWindowHeight] = useState(0);
 
   useEffect(() => {
-    if (window.innerWidth) {
-      setWindowHeight(window.innerWidth);
-    }
-  }, [])
+    const handleResize = () => setWindowHeight(window.innerWidth);
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   
   return (
     <>

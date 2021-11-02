@@ -10,7 +10,7 @@ const Web = () => {
       </h1>
       <p>Un problème avec votre bateaux ?</p> 
       <Truck/>  
-      <Link href="/contact"><button>Contacter nous !</button></Link>
+      <Link href="/contact"><button>Contactez nous !</button></Link>
     </section>
   )
 };
