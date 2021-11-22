@@ -88,26 +88,6 @@ const Button = () => {
             onMouseLeave={handleLeave} 
             className={itemStyle}>
             <Link 
-              onClick={handleClick} 
-              href="/annonces">
-              <a className={styles.navItemsBurger}>Annonces</a>
-            </Link> 
-          </li>
-          <li 
-            onMouseEnter={handleEnter} 
-            onMouseLeave={handleLeave} 
-            className={itemStyle}>
-            <Link 
-              onClick={handleClick} 
-              href="/realisations">
-              <a className={styles.navItemsBurger}>Réalisations</a>
-            </Link> 
-          </li>
-          <li 
-            onMouseEnter={handleEnter} 
-            onMouseLeave={handleLeave} 
-            className={itemStyle}>
-            <Link 
               onClick={handleClick}
               href="/contact">
               <a className={styles.navItemsBurger}>Contact</a>
