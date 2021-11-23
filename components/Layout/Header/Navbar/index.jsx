@@ -48,7 +48,7 @@ const NavBar = ({show}) => {
     <nav className={navbarStyle} >  
       <div className={styles.left}>    
         <Link href="/">                
-          <a className={logoStyle}>JC <span>Sailing</span> <em>by Jean-Cristophe Théo</em></a>
+          {navToggle ? <a className={logoStyle}>JC <span>Sailing</span> <em>by Jean-Cristophe Théo</em></a> : <a className={logoStyle}>.</a>}
         </Link>
       </div>
       <div className={styles.right}>
