@@ -29,11 +29,38 @@
   flex-direction: column;
   justify-content: center;
   padding: 3rem;
+  padding-bottom: 1rem;
   background-color: $background-grey;
   text-align: center;
   h2 {
     margin-bottom: 2rem;
     font-family: Orbitron;
+  }
+  div.arrow {
+    &_left {
+      color: #9e9e9ef1;
+      font-weight: bolder;
+      position: absolute;        
+      padding: 60px 30px;
+      left: 1rem;
+      margin-bottom: 2rem;
+      &:hover, &:target {
+        background-color: $background-navbar;
+        cursor: pointer;
+      }
+    }
+    &_right {
+      color: #9e9e9ef1;
+      font-weight: bolder;
+      position: absolute;
+      right: 1rem;
+      margin-bottom: 2rem;
+      padding: 60px 30px;
+      &:hover, &:target {
+        background-color: $background-navbar;
+        cursor: pointer;
+      }
+    }
   }
   ul {
     border-top: 1px solid #9e9e9ef1;
@@ -42,30 +69,12 @@
     justify-content: space-around;
     align-items: center;
     width: 60vw;
-    height: 220px;
     li {
-      margin: 1rem
+      display: flex;
+      align-items: center;
+      height: 120px;
+      margin: 1rem;
     }
-    div.arrow {
-      &_left {
-        position: absolute;        
-        padding: 30px;
-        text-align: center;
-        left: 1rem;
-        :hover, :target {
-          background-color: $background-navbar;
-        }
-        
-      }
-      &_right {
-        position: absolute;
-        right: 1rem;
-        padding: 30px;
-        text-align: center;
-        :hover {
-          background-color: $background-navbar;
-        }
-      }
-    }
+    
   }
 }

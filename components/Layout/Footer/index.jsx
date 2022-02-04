@@ -1,6 +1,6 @@
+import { useState, useEffect } from "react";
 import Link from 'next/link';
 import styles from './footer.module.scss';
-import { useState, useEffect } from "react";
 
 const Footer = () => {
   const [windowHeight, setWindowHeight] = useState(0);
@@ -18,17 +18,20 @@ const Footer = () => {
      <footer className={windowHeight >= 1200 ? styles.footer_web : styles.footer_mobile }>
        <section className={styles.section}>
           <div className={styles.descriptions}>
-            <Link href="/">                
+            <Link href="#jumbotron">                
               <a className={styles.logo}><span>JC</span> Sailing</a>
             </Link>
             <p><span>JC</span> Sailing est une entreprise spécialisée dans l'entretien, la vente et la réparation de bateaux de plaisance</p>
           </div>
           <div className={styles.list_links}>
             <h3>Liens utiles</h3>
-            <Link href="/">
+            <Link href="#jumbotron">
               <a className={styles.navbar_links}>Accueil</a>
-            </Link> 
-            <Link href="/contact">
+            </Link>
+            <Link href="#categories">
+              <a className={styles.navbar_links}>Nos Prestations</a>
+            </Link>    
+            <Link href="#contact">
               <a className={styles.navbar_links}>Contact</a>
             </Link>      
           </div>
@@ -39,7 +42,7 @@ const Footer = () => {
             <p>E-mail: <a href="mailto:jcsailing@gmail.com">jcsailing@gmail.com</a> </p>
           </address>
         </section>
-        <p className={styles.mentions}>© 2021 <span>JC</span> Sailing, tous droits réservés.</p>
+        <p className={styles.mentions}>© 2022 <span>JC</span> Sailing, tous droits réservés.</p>
       </footer>
     </>
   )

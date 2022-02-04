@@ -5,13 +5,13 @@ import styles from './mobile.module.scss';
 const Mobile = () => {
   return (
     <section className={styles.jumbotron}>
-      <h1>
+      <h1 id="jumbotron">
         Bienvenue chez <br/><span>JC</span> Sailing !
       </h1>
       <p>Un problème avec votre bateaux ?</p> 
       <Truck /> 
       <div className={styles.center}>
-        <Link href="/contact"><button>Contactez nous !</button></Link>
+        <Link href="#contact"><button>Contactez nous !</button></Link>
       </div> 
     </section>
   )

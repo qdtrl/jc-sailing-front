@@ -17,18 +17,6 @@ const Suppliers = () => {
   
   const suppliers = [
     <Image
-    src="/images/osculati.png"
-    alt="Osculati"
-    height={120}
-    width={120}
-    />,
-    <Image
-    src="/images/boero.png"
-    alt="Boero"
-    height={90}
-    width={90}
-    />,
-    <Image
     src="/images/soloplast.png"
     alt="Soloplast"
     height={50}
@@ -39,6 +27,18 @@ const Suppliers = () => {
     alt="Agl Marine"
     height={60}
     width={144}
+    />,
+    <Image
+    src="/images/osculati.png"
+    alt="Osculati"
+    height={120}
+    width={120}
+    />,
+    <Image
+    src="/images/boero.png"
+    alt="Boero"
+    height={90}
+    width={90}
     />,
     <Image
       src="/images/awl_grip.png"
@@ -61,24 +61,28 @@ const Suppliers = () => {
       <section className={styles.suppliers_web}>
         <h2>Nos Fournisseurs</h2>
         <ul>
-          {suppliers.map(supplier => (<li>{supplier}</li>))}
+          {suppliers.map((supplier, index) => (<li key={index}>{supplier}</li>))}
         </ul>
       </section> 
       : 
       <section className={styles.suppliers_mobile}>
         <h2>Nos Fournisseurs</h2>
         { index !== 4 ? 
+          <>
+          { index != 0 && <div className={styles.arrow_left} onClick={handleBack}>{`<`}</div>}
+          <div className={styles.arrow_right} onClick={handleNext}>{`>`}</div> 
           <ul>
-            { index != 0 && <div className={styles.arrow_left} onClick={handleBack}>{`<`}</div>}
             <li>{suppliers[index]}</li>
             <li>{suppliers[index + 1]}</li>
-            <div className={styles.arrow_right} onClick={handleNext}>{`>`}</div> 
           </ul>
-          : 
+          </>
+          :
+          <>
+          <div className={styles.arrow_left} onClick={handleBack}>{`<`}</div> 
           <ul>
-            <div className={styles.arrow_left} onClick={handleBack}>{`<`}</div>
             <li>{suppliers[index]}</li>
           </ul>
+          </>
         }
       </section>  }
     </>

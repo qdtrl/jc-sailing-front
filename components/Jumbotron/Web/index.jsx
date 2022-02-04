@@ -5,12 +5,12 @@ import styles from './web.module.scss';
 const Web = () => {
   return (
     <section className={styles.jumbotron}>
-      <h1>
+      <h1 id="jumbotron">
         Bienvenue chez <span>JC</span> Sailing !
       </h1>
       <p>Un problème avec votre bateaux ?</p> 
       <Truck/>  
-      <Link href="/contact"><button>Contactez nous !</button></Link>
+      <Link href="#contact"><button>Contactez nous !</button></Link>
     </section>
   )
 };

@@ -1,20 +1,19 @@
-import Image from 'next/image'
-import Link from 'next/link';
+import Image from 'next/image';
 import styles from './mobile.module.scss';
 
 const Mobile = () => { 
   return (
     <>
-    <section className={styles.categories}>
-      <div className={styles.center}>
+    <section id="categories" className={styles.categories}>
+      <div>
         <div className={styles.description}>
-          <h2>Carènage - Antifouling - Calage de bateau</h2>
+          <h2>Carénage - Antifouling - Calage de bateau</h2>
           <p>
-            Nous prenons en charge le bateau pour, le carenage, nettoyage, mise à nue, primaire epoxy, antifouling, remplacement des anodes 
+            Nous prenons en charge le bateau pour le <strong>carénage</strong>, le nettoyage, la mise à nue, appliquer la primaire epoxy, puis l'<strong>antifouling</strong>, ainsi que le remplacement des anodes. 
           </p>
           <h2>Peinture</h2>
           <p>
-            Réalisation de laque au pistolet !
+            Réalisation de <strong>laque</strong> au pistolet !
           </p>
         </div>
         <Image
@@ -24,17 +23,17 @@ const Mobile = () => {
           width={425}
         />
         <div className={styles.description}>
-          <h2>Réparation polyester & époxy</h2>
+          <h2>Polyester & époxy</h2>
           <p>
-            On répare ce que vous cassez
+            Nous pouvons <strong>réparer</strong> vos pieces en polyester et époxy. 
           </p>
-          <h2>Remplacement de hublot</h2>
+          <h2>Hublot & Propulseur</h2>
           <p>
-              Bas on les remplacement
+              Nous vous remplaçons vos anciens <strong>hublots</strong>. Besoin d'un propulseur ? On vous l'installe.
           </p>
-          <h2>Stratification création & réparation</h2>
+          <h2>Stratification</h2>
           <p>
-            Installation de propulseur, fabrication et réalisation de piéce sur mesure
+            Nous vous réparons vos pièces et pouvons aussi les créer sur mesures en fonctions de vos besoins.
           </p>
         </div>
         <Image
@@ -44,10 +43,12 @@ const Mobile = () => {
           width={400}
         />
         <div className={styles.description}>
-          <h2>Vente de produits & produits d'entretiens</h2>
-          <p>
-            Antifouling et laque
-          </p>
+          <h2>Vente de produits</h2>
+          <ul>
+            <li>Produits d'entretiens</li>
+            <li>Antifouling</li> 
+            <li>Laque</li> 
+          </ul>
         </div>
         <Image
           src="/images/vente.png"

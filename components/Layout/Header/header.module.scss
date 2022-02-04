@@ -1,4 +1,4 @@
-@import '../../../../styles/config';
+@import '../../../styles/config';
 
 nav {
   &.navbar {
@@ -11,6 +11,7 @@ nav {
     color: $primary-color;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     &.scrolled_navbar {
       @include transition-ease;
@@ -19,13 +20,9 @@ nav {
   }
   div {
     &.right {
-        width: 70vw;
-        display: inline-flex;
-        justify-content: flex-end;
         margin-right: 2rem;
     }
     &.left {
-      width: 450px;
       display: inline-flex;
       align-items: center;
       a.logo {
