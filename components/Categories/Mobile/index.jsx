@@ -19,8 +19,8 @@ const Mobile = () => {
         <Image
           src="/images/peinture.png"
           alt="laque-peinture-bateau-marin-pecheur"
-          height={425}
-          width={425}
+          height={375}
+          width={375}
         />
         <div className={styles.description}>
           <h2>Polyester & époxy</h2>
@@ -39,8 +39,8 @@ const Mobile = () => {
         <Image
           src="/images/stratification.jpeg"
           alt="stratification"
-          height={400}
-          width={400}
+          height={350}
+          width={350}
         />
         <div className={styles.description}>
           <h2>Vente de produits</h2>
@@ -53,8 +53,8 @@ const Mobile = () => {
         <Image
           src="/images/vente.png"
           alt="vente-de-produit-entretien-voilier-bateaux-moteur"
-          height={400}
-          width={400}
+          height={350}
+          width={350}
         />
       </div>
     </section>

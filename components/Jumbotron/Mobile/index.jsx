@@ -11,7 +11,7 @@ const Mobile = () => {
       <p>Un problème avec votre bateaux ?</p> 
       <Truck /> 
       <div className={styles.center}>
-        <Link href="#contact"><button>Contactez nous !</button></Link>
+        <Link href="#contact"><button>Contactez nous</button></Link>
       </div> 
     </section>
   )
