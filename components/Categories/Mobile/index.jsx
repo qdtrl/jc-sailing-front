@@ -37,9 +37,9 @@ const Mobile = () => {
           </p>
         </div>
         <Image
-          src="/images/stratification.jpeg"
+          src="/images/stratification.png"
           alt="stratification"
-          height={350}
+          height={250}
           width={350}
         />
         <div className={styles.description}>

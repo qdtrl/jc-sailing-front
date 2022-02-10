@@ -40,9 +40,9 @@ const Web = () => {
             </p>
           </div>
           <Image
-            src="/images/stratification.jpeg"
+            src="/images/stratification.png"
             alt="stratification"
-            height={400}
+            height={300}
             width={400}
           />
         </div>
