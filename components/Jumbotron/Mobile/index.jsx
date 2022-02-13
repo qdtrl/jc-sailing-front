@@ -8,7 +8,7 @@ const Mobile = () => {
       <h1 id="jumbotron">
         Bienvenue chez <br/><span>JC</span> Sailing !
       </h1>
-      <p>Un problème avec votre bateaux ?</p> 
+      <p>Un problème avec votre bateau ?</p> 
       <Truck /> 
       <div className={styles.center}>
         <Link href="#contact"><button>Contactez nous</button></Link>

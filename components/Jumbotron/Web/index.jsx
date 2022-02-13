@@ -8,7 +8,7 @@ const Web = () => {
       <h1 id="jumbotron">
         Bienvenue chez <span>JC</span> Sailing !
       </h1>
-      <p>Un problème avec votre bateaux ?</p> 
+      <p>Un problème avec votre bateau ?</p> 
       <Truck/>  
       <Link href="#contact"><button>Contactez nous</button></Link>
     </section>
