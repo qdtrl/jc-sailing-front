@@ -1,0 +1,97 @@
+@import '../../styles/config';
+
+section.jumbotron {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(28, 28, 43, 0.5), rgba(2, 2, 1, 0.5)),
+  url("../../public/images/JC\ Fond\ d\'ecran.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  h1 {
+    z-index: 0;
+    padding: 2rem;
+    padding: 2rem;
+    font-family: Orbitron;
+    font-size: 3rem;
+    div.logo {
+      height: 40vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 8rem;
+      color: white;
+      span {
+        color: $primary-color;
+      }
+    }
+  }
+  div.contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    p {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin: 2rem;
+    }
+  }
+  div.continue {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    margin: 2rem;
+  }
+  button {
+    width: 200px;
+    padding: 1rem 0.8rem;
+    background: $primary-color;
+    color: $secondary-color;
+    font-size: 1rem;
+    border: 1px solid $primary-color;
+    border-left: none;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+	section.jumbotron {
+    h1 {
+      font-size: 4rem;
+      div {
+        &.logo{
+          height: 40vh;
+          font-size: 12rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 750px) {
+  section.jumbotron {
+    h1 {
+      font-size: 1rem;
+      div {
+        &.logo{
+          height: 40vh;
+          font-size: 3.5rem;
+        }
+      }
+    }
+    div {
+      &.contact p{
+        font-size: 1rem;
+      }
+      &.continue {
+        font-size: 0.6rem; 
+      }
+    }
+  }
+}

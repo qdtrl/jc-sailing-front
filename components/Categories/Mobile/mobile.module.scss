@@ -1,14 +1,31 @@
 @import '../../../styles/config';
 
 section.categories {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 100vw;
+  .background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100vw;
+    &image {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: linear-gradient(rgba(28, 28, 43, 0.6), rgba(1, 1, 2, 0.6)),
+      url("../../../public/images/granville.jpeg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+  }
+  .bateau {
+    margin-bottom: -1rem;
+  }
   .description {
     width: 360px;
     h2 {
-      // text-align: lef;
+      text-align: center;
       margin: 1rem;
       margin-top: 2rem;
     }
@@ -18,6 +35,17 @@ section.categories {
     ul {
       margin-left: 1.4rem;
       text-align: left;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  section.categories .description {
+    h2 {
+      font-size: 1rem;
+    }
+    p {
+      font-size: 0.8rem;
     }
   }
 }

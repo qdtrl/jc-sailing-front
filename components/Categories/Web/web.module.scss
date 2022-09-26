@@ -9,68 +9,74 @@
   }
   div {
     &.center {   
-      width: 1000px;
+      width: 100vw;
       margin-bottom: 4rem;
-    }
-  }
-  div {
-    &.card_categorie_center {
-      margin-bottom: 0rem;
-      margin-left: 5%;
-      display: flex;
-      align-items: center;
-      width: 90%;
-      justify-content: space-between;
-      .description {
-        text-align: center;
-        width: 50%;
-        ul {
-          margin: 2rem;
-          text-align: left;
+      div {
+        &.card_categorie_center {
+          width: 100vw;
+          margin-bottom: 0rem;
+          display: flex;
+          align-items: center;
+          justify-content:center;
+          .description {
+            text-align: center;
+            width: 400px;
+            ul {
+              margin: 2rem;
+              text-align: left;
+            }
+            h2 {
+              margin: 1rem;
+            }
+            p {
+              margin: 2rem
+            }
+          }
         }
-        h2 {
-          margin: 1rem;
+        &.card_categorie_left {
+          background: linear-gradient(rgba(28, 28, 43, 0.7), rgba(2, 2, 1, 0.7)),
+          url("../../../public/images/granville.jpeg");
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          margin-bottom: 0rem;
+          display: flex;
+          width: 100vw;
+          justify-content: center;
+          align-items: center;
+          .description {
+            text-align: left;
+            width: 400px;
+            h2 {
+              margin: 1rem;
+              margin-bottom: 0.5rem;
+            }
+            p {
+              margin: 1rem;
+            }
+          }
         }
-        p {
-          margin: 2rem
-        }
-      }
-    }
-    &.card_categorie_left {
-      margin-bottom: 0rem;
-      display: flex;
-      width: 100%;
-      justify-content: space-between;
-      align-items: center;
-      .description {
-        text-align: left;
-        width: 50%;
-        h2 {
-          margin: 1rem;
-          margin-bottom: 0.5rem;
-        }
-        p {
-          margin: 1rem;
-        }
-      }
-    }
-    &.card_categorie_right {
-      margin-top: 1rem;
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      align-items: center;
-      .description {
-        margin: 0rem;
-        text-align: right;
-        width: 50%;
-        h2 {
-          margin: 1rem;
-        }
-        p {
-          margin: 2rem
+        &.card_categorie_right {
+          margin-top: 1rem;
+          display: flex;
+          justify-content: center;
+          width: 100vw;
+          align-items: center;
+          .description {
+            margin: 0rem;
+            text-align: right;
+            width: 400px;
+            h2 {
+              margin: 1rem;
+            }
+            p {
+              margin: 2rem
+            }
+          }
         }
       }
     }
   }
 }
+

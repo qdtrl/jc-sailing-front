@@ -60,7 +60,7 @@ const Header = ({show}) => {
         </div>
         <div className={styles.right}>
           <Link href="#contact">
-            <a className={styles.navbar_links}>Contact</a>
+            {navToggle ? <a className={styles.navbar_links}>Contact</a> : ""}
           </Link>                
         </div>
       </nav>    

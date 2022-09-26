@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import Web from './Web';
-import Mobile from './Mobile';
 
+import Link from "next/link";
+import styles from './jumbotron.module.scss';
 const Jumbotron = () => {
   const [windowHeight, setWindowHeight] = useState(0);
 
@@ -14,9 +14,18 @@ const Jumbotron = () => {
   }, []);
   
   return (
-    <>
-      { windowHeight >= 1200 ? <Web/> : <Mobile/> }
-    </>
+    <section className={styles.jumbotron}>
+      <h1 id="jumbotron">
+        Bienvenue chez <br/><div className={styles.logo}><span>JC</span> Sailing</div>
+      </h1>
+      <div className={styles.contact}>
+        <p>Un problème avec votre bateau ? </p>
+        <Link href="#contact"><button>Contactez nous</button></Link>  
+      </div>
+      <div className={styles.continue}>
+        ᐯ <p>Continuer pour voir les prestations que nous proposons</p>
+      </div> 
+    </section>
   )
 }
 
